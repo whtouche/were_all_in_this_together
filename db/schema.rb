@@ -35,10 +35,12 @@ ActiveRecord::Schema.define(version: 20140820161451) do
     t.text     "message"
     t.string   "picture"
     t.integer  "user_id"
+    t.integer  "child_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "donations", ["child_id"], name: "index_donations_on_child_id", using: :btree
   add_index "donations", ["user_id"], name: "index_donations_on_user_id", using: :btree
 
   create_table "users", force: true do |t|

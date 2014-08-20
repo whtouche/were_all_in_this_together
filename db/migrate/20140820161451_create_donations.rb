@@ -5,6 +5,7 @@ class CreateDonations < ActiveRecord::Migration
       t.text :message
       t.string :picture
       t.references :user, index: true
+      t.references :child, index: true
 
       t.timestamps
     end
