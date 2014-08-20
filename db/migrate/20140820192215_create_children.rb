@@ -7,6 +7,9 @@ class CreateChildren < ActiveRecord::Migration
       t.string   :avatar
       t.integer :donations_number
       t.decimal :donations_total
+      t.string :picture_one
+      t.string :picture_two
+      t.string :picture_three
       t.references :user, index: true
 
       t.timestamps
