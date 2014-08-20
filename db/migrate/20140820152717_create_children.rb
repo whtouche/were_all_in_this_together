@@ -1,6 +1,6 @@
-class CreateChild < ActiveRecord::Migration
+class CreateChildren < ActiveRecord::Migration
   def change
-    create_table :child do |t|
+    create_table :children do |t|
       t.string :first_name, null: false
       t.string :last_name
       t.date :dob, null: false

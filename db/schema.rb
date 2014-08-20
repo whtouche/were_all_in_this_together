@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140820152717) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "child", force: true do |t|
+  create_table "children", force: true do |t|
     t.string   "first_name",       null: false
     t.string   "last_name"
     t.date     "dob",              null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140820152717) do
     t.datetime "updated_at"
   end
 
-  add_index "child", ["user_id"], name: "index_child_on_user_id", using: :btree
+  add_index "children", ["user_id"], name: "index_children_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
