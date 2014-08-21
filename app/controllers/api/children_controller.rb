@@ -4,8 +4,8 @@ class Api::ChildrenController < ApplicationController
   # GET /children
   # GET /children.json
   def index
-    children = Child.all
-    # children = current_user.children
+    # children = Child.all
+    children = current_user.children
     render json: children
   end
 
