@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  root to: "home#index"
+
+  namespace :api, defaults: {format: :json} do
+    devise_scope :user do
+      resource :session, only: [:create, :destroy]
+    end
+    resources :children, only: [:index, :create, :update, :destroy, :show] do
+      resources :donations, only: [:index, :create, :update, :destroy]
+    end
+  end
+
+  root :to => "home#index"
+
+
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,4 +68,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
