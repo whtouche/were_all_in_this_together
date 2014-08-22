@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'faker'
 gem 'active_model_serializers'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
