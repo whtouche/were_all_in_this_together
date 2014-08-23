@@ -12,12 +12,12 @@ class Api::ChildrenController < ApplicationController
   end
 
   def create
-    newchild = current_user.children.create!(safe_params)
+    newchild = current_user.children.create!(child_params)
     render json: newchild
   end
 
   def update
-    child.update_attributes(safe_params)
+    child.update_attributes(child_params)
     render nothing: true
   end
 

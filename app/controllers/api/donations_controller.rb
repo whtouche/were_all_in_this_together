@@ -32,8 +32,4 @@ class Api::DonationsController < ApplicationController
   def donation_params
     params.require(:donation).permit()
   end
-
-  # def check_owner
-  #   permission_denied if current_user != task_list.owner
-  # end
 end
