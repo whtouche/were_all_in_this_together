@@ -7,7 +7,7 @@ class Api::DonationsController < ApplicationController
 
   def create
     donation = child.donations.create!(donation_params)
-    #render json: task, status: 201
+    #render json: donation, status: 201
   end
 
   def update
@@ -22,7 +22,7 @@ class Api::DonationsController < ApplicationController
 
   private
   def child
-    @child ||= Child.find(params[:donations_id])
+    @child ||= Child.find(params[:child_id])
   end
 
   def donation
@@ -32,8 +32,4 @@ class Api::DonationsController < ApplicationController
   def donation_params
     params.require(:donation).permit()
   end
-
-  # def check_owner
-  #   permission_denied if current_user != task_list.owner
-  # end
 end
