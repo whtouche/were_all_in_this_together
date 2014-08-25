@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'angular_rails_csrf'
 gem 'faker'
 gem 'active_model_serializers'
 gem 'devise'

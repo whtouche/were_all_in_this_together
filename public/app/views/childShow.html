@@ -1,0 +1,17 @@
+<h3>Child Show Page</h3>
+<h4>{{child.first_name}} {{child.last_name}}</h4>
+<ul ng-repeat="donation in child.donations">
+  <li><a href="/#/children/{{child.id}}/donations/{{donation.id}}">{{donation.message}}</li></a>
+</ul>
+
+<div ng-controller="donationController">
+<h4>Make a donation</h4>
+  <form>
+    Amount:
+    <input type="number" ng-model="donation.amount" required /><br>
+    Message:
+    <input type="text" ng-model="donation.message" required /><br>
+    <button ng-click="createDonation()">Donate</button>
+  </form>
+  {{donation.message}}
+</div>

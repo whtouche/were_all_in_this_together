@@ -6,13 +6,13 @@ Rails.application.routes.draw do
       resource :session, only: [:create, :destroy]
     end
     resources :children, only: [:index, :create, :update, :destroy, :show] do
-      resources :donations, only: [:index, :create, :update, :destroy]
+      resources :donations, only: [:index, :create, :update, :destroy, :show]
     end
   end
 
   root :to => "home#index"
-
-
+  #
+  # get 'api/children' => 'templates#'
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -68,4 +68,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
