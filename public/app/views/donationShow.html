@@ -1,3 +1,5 @@
 <h3>Donation Show</h3>
-{{donation[0].message}}<br/>
-{{donation[0].amount | currency}}
+<div ng-init="showDonation()">
+{{donation.message}}<br/>
+{{donation.amount | currency}}
+</div>

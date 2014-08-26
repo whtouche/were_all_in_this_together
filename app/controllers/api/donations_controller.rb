@@ -5,9 +5,13 @@ class Api::DonationsController < ApplicationController
     render json: child.donations
   end
 
+  def show
+    render json: donation
+  end
+
   def create
     donation = child.donations.create!(donation_params)
-    #render json: donation, status: 201
+    render json: donation, status: 201
   end
 
   def update
@@ -30,6 +34,6 @@ class Api::DonationsController < ApplicationController
   end
 
   def donation_params
-    params.require(:donation).permit()
+    params.require(:donation).permit(:message, :amount)
   end
 end

@@ -1,0 +1,13 @@
+<h3>New Child</h3>
+<div ng-controller="donationController" id="donationForm">
+<h4>Make a donation</h4>
+  <form>
+    First Name:
+    <input type="text" ng-model="newChild.first_name" required /><br>
+    Last Name:
+    <input type="text" ng-model="newChild.last_name" required /><br>
+    Date of Birth:
+    <input type="text" ng-model="newChild.dob" required /><br>
+    <button ng-click="createDonation()">Procreate</button>
+  </form>
+</div>
