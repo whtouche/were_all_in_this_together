@@ -10,6 +10,10 @@ myApp.factory("childFactory", ['$http', function($http){
     return $http.get('/api/children/'+childId);
   };
 
+  factory.createChild = function(userId, child){
+    return $http.post('/api/children/', donation);
+  };
+
   return factory;
 
 }]);

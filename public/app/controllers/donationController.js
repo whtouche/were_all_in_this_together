@@ -4,12 +4,17 @@ myApp.controller("donationController", ["$scope", "donationFactory", "$routePara
   var childId = $routeParams.childId;
 
   $scope.createDonation = function(){
-    donationFactory.createDonation(childId, $scope.newDonation);
+    donationFactory.createDonation(childId, $scope.newDonation).
+    success( function(){
+      $scope.getChildDonations();
+    });
   };
 
   $scope.showDonation = function(){
-    donationFactory.getDonation(donationId).success( function(data){
-      $scope.donation = data[0];
+    donationFactory.getDonation(childId, donationId)
+    .success( function(data){
+      console.log(data);
+      $scope.donation = data;
     })
     .error(function(data){
       console.log("ERROR: ");
