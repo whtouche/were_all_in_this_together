@@ -15,16 +15,3 @@ myApp.factory("childFactory", ['$http', function($http){
 }]);
 
 
-// roadTripApp.factory('albumFactory', ['$http', function($http){
-//   var factory = {};
-//
-//   factory.getAlbums = function(gender){
-//     return $http.get("/api/"+username+"/albums")
-//   };
-//
-//   factory.getPhotos = function(username,album_title){
-//     return $http.get("/api/"+username+"/albums/"+album_title+'/photos')
-//   };
-//
-//   return factory;
-// }]);

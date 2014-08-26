@@ -22,25 +22,3 @@ myApp.config(['$routeProvider', 'AuthProvider', function($routeProvider, AuthPro
     ;
 
 }]);
-
-
-
-// gaApp.config(['$routeProvider', function ($routeProvider){
-// // give path, view, controller
-//   $routeProvider
-//     .when('/students',
-//       {
-//         controller: 'StudentsCtrl',
-//         templateUrl: 'app/views/students.html'
-//       })
-//     .when('/students/:studentId',
-//       {
-//         controller: 'StudentCtrl',
-//         templateUrl: 'app/views/student.html'
-//       })
-//     .when('/home',
-//       {
-//         templateUrl: 'app/views/home.html'
-//       })
-//     .otherwise({ redirectTo: '/home' });
-// }]);
