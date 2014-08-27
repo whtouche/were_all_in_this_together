@@ -7,7 +7,7 @@ myApp.factory("donationFactory", ['$http', function($http){
   };
   factory.createDonation = function(){
     $http.post('/api/children/'+childId+'/donations');
-  }
+  };
 
   return factory;
 
