@@ -1,7 +1,6 @@
 var myApp = angular.module("myApp", ["ngRoute", "Devise", "ngResource"]);
 
 myApp.config(['$routeProvider', 'AuthProvider', function($routeProvider, AuthProvider){
-
   $routeProvider
     .when('/', {
       controller: 'childrenController',
@@ -15,32 +14,17 @@ myApp.config(['$routeProvider', 'AuthProvider', function($routeProvider, AuthPro
       controller: 'donationController',
       templateUrl: 'app/views/donationShow.html'
     })
-    // .when('/children/:childId/donations/:donationId', {
-    //   controller: 'donationController',
-    //   templateUrl: 'app/views/donationShow.html'
-    // })
+    .when('/login', {
+      controller: 'authController',
+      templateUrl: 'app/views/login.html'
+    })
     ;
 
 }]);
 
-
-
-// gaApp.config(['$routeProvider', function ($routeProvider){
-// // give path, view, controller
-//   $routeProvider
-//     .when('/students',
-//       {
-//         controller: 'StudentsCtrl',
-//         templateUrl: 'app/views/students.html'
-//       })
-//     .when('/students/:studentId',
-//       {
-//         controller: 'StudentCtrl',
-//         templateUrl: 'app/views/student.html'
-//       })
-//     .when('/home',
-//       {
-//         templateUrl: 'app/views/home.html'
-//       })
-//     .otherwise({ redirectTo: '/home' });
-// }]);
+myApp.config([
+    '$httpProvider',
+    function($httpProvider) {
+        $httpProvider.defaults.withCredentials = true;
+    }
+]);
