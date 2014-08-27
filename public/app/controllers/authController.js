@@ -5,13 +5,19 @@ myApp.controller("authController", ["$scope", "Auth", function($scope, Auth){
             console.log(user); // => {id: 1, ect: '...'}
             console.log(Auth.isAuthenticated()); // True or False
           }, function(error) {
-            // unauthenticated error
+            console.log("ERROR: "+error);
           });
 
          var credentials = {
             email: $scope.email,
             password: $scope.password
         };
+
+        $scope.login = function(){
+          console.log(credentials.email, credentials.password);
+        };
+
+        console.log(credentials.email, credentials.password);
 
         Auth.login(credentials).then(function(user) {
             console.log(user); // => {id: 1, ect: '...'}
