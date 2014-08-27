@@ -10,21 +10,10 @@ myApp.factory("childFactory", ['$http', function($http){
     return $http.get('/api/children/'+childId);
   };
 
+  factory.createChild = function(userId, child){
+    return $http.post('/api/children/', donation);
+  };
+
   return factory;
 
 }]);
-
-
-// roadTripApp.factory('albumFactory', ['$http', function($http){
-//   var factory = {};
-//
-//   factory.getAlbums = function(gender){
-//     return $http.get("/api/"+username+"/albums")
-//   };
-//
-//   factory.getPhotos = function(username,album_title){
-//     return $http.get("/api/"+username+"/albums/"+album_title+'/photos')
-//   };
-//
-//   return factory;
-// }]);
