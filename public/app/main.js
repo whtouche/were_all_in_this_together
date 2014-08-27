@@ -16,6 +16,14 @@ myApp.config(['$routeProvider', 'AuthProvider', function($routeProvider, AuthPro
     controller: 'donationController',
     templateUrl: 'app/views/donationShow.html'
   })
-  ;
+  .when('/authenticate', {
+    controller: 'authController',
+    templateUrl: 'app/views/login.html'
+  });
 
+  myApp.config(['$httpProvider',function($httpProvider)
+  {
+    $httpProvider.defaults.withCredentials = true;
+  }
+  ]);
 }]);

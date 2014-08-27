@@ -13,7 +13,6 @@ myApp.controller("donationController", ["$scope", "donationFactory", "$routePara
   $scope.showDonation = function(){
     donationFactory.getDonation(childId, donationId)
     .success( function(data){
-      console.log(data);
       $scope.donation = data;
     })
     .error(function(data){
