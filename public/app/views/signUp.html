@@ -1,0 +1,12 @@
+<h3>Sign Up</h3>
+<form id="signup-form" ng-submit="sendRegistration()">
+  <div>
+    <label for="email">Email address</label>
+    <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+  </div>
+  <div>
+    <label for="password">Password (Please dont use a real password)</label>
+    <input type="password" ng-model="password" minlength="6" class="form-control" id="password" placeholder="Enter password">
+  </div>
+  <button type="submit">Submit</button>
+</form>
